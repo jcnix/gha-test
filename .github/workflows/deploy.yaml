@@ -4,5 +4,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: prod
-    steps: |
-      eho "deploy"
+    steps:
+      - run: |
+          eho "deploy"
