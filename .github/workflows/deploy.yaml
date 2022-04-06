@@ -1,6 +1,13 @@
 name: Deployment
 on: [push, workflow_dispatch]
 jobs:
+  stage:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - run: |
+          echo "deploy"
+          exit 0
   deploy:
     runs-on: ubuntu-latest
     environment: prod
